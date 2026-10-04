@@ -1,0 +1,37 @@
+[
+  {
+    "id": "CT-LOGIN-03",
+    "title": "campos vazios (usuário e senha)",
+    "username": "",
+    "password": "",
+    "expectedMessage": "USERNAME_REQUIRED"
+  },
+  {
+    "id": "CT-LOGIN-04",
+    "title": "usuário vazio com senha preenchida",
+    "username": "",
+    "password": "{{PASSWORD}}",
+    "expectedMessage": "USERNAME_REQUIRED"
+  },
+  {
+    "id": "CT-LOGIN-05",
+    "title": "senha vazia com usuário preenchido",
+    "username": "{{STANDARD_USER}}",
+    "password": "",
+    "expectedMessage": "PASSWORD_REQUIRED"
+  },
+  {
+    "id": "CT-LOGIN-06",
+    "title": "senha inválida",
+    "username": "{{STANDARD_USER}}",
+    "password": "senha_incorreta",
+    "expectedMessage": "INVALID_CREDENTIALS"
+  },
+  {
+    "id": "CT-LOGIN-07",
+    "title": "usuário inexistente",
+    "username": "usuario_inexistente",
+    "password": "{{PASSWORD}}",
+    "expectedMessage": "INVALID_CREDENTIALS"
+  }
+]
